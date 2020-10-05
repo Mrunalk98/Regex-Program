@@ -8,20 +8,22 @@ namespace RegexProgram
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Regex Program!");
-            string pinCodePattern = "^[1-9]{1}[0-9]{2}\\s{0,1}[0-9]{3}$";
-            Regex regex = new Regex(pinCodePattern);
+            PinCode pincode = new PinCode();
 
-            Console.Write("Enter a pin code : ");
-            var pinCode = Console.ReadLine();
+            Console.WriteLine("Select option you want to validate : 1. Pin Code     2. Email");
+            var choice = Convert.ToInt32(Console.ReadLine());
 
-            if (regex.IsMatch(pinCode))
+            switch(choice)
             {
-                Console.WriteLine("Valid Pin Code");
-            }
-            else
-            {
-                Console.WriteLine("Invalid Pin Code");
+                case 1:
+                    pincode.PinCodeValidation();
+                    break;
 
+                case 2:
+                    break;
+
+                default :
+                    break;
             }
         }
     }
