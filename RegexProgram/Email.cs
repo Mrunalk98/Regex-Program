@@ -9,7 +9,7 @@ namespace RegexProgram
     {
         public void EmailValidation()
         {  
-            string emailPattern = @"^([a-z0-9.+_-]*@([a-z0-9]*?\.)+[a-z0-9]*?)$";
+            string emailPattern = @"^([a-z0-9.+_-]*@(?:bridgelabz?\.)[a-z0-9.]*?)$";
             Regex regex = new Regex(emailPattern);
 
             Console.Write("Enter an email : ");
