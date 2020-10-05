@@ -9,6 +9,7 @@ namespace RegexProgram
         {
             Console.WriteLine("Welcome to Regex Program!");
             PinCode pincode = new PinCode();
+            Email email = new Email();
 
             Console.WriteLine("Select option you want to validate : 1. Pin Code     2. Email");
             var choice = Convert.ToInt32(Console.ReadLine());
@@ -20,6 +21,7 @@ namespace RegexProgram
                     break;
 
                 case 2:
+                    email.EmailValidation();
                     break;
 
                 default :
